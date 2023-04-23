@@ -46,7 +46,7 @@ public class VentaDetalle {
         this.dieta = dieta;
     }
 
-    public double getPrecio() {
+    public int getPrecio() {
         return precio;
     }
 
