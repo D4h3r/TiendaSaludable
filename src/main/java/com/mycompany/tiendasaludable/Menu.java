@@ -34,7 +34,7 @@ public class Menu {
             scanner.nextLine();
 
             switch (opcion) {
-                case 1:
+                case 1 -> {
                     // Lógica para gestionar clientes
                     int opcionClientes;
                     do {
@@ -68,8 +68,8 @@ public class Menu {
                                 System.out.println("Opción inválida. Intente de nuevo.");
                         }
                     } while (opcionClientes != 5);
-                    break;
-                case 2:
+                }
+                case 2 -> {
                     // Lógica para gestionar productos
                     int opcionProductos;
                     do {
@@ -103,8 +103,8 @@ public class Menu {
                                 System.out.println("Opción inválida. Intente de nuevo.");
                         }
                     } while (opcionProductos != 5);
-                    break;
-                case 3:
+                }
+                case 3 -> {
                     // Lógica para gestionar ventas
                     int opcionVentas;
                     do {
@@ -117,29 +117,29 @@ public class Menu {
                         System.out.print("Ingrese la opción deseada: ");
                         opcionVentas = scanner.nextInt();
                         scanner.nextLine();
-
-                    switch (opcionVentas) {
-                        case 1:
-                            tiendaSaludable.mostrarVentas();
-                            break;
-                        case 2:
-                            tiendaSaludable.agregarVenta();
-                            break;
-                        case 3:
-                            tiendaSaludable.actualizarVenta();
-                            break;
-                        case 4:
-                            tiendaSaludable.eliminarVenta();
-                            break;
-                        case 5:
-                            System.out.println("Regresando al menú principal...");
-                            break;
-                        default:
-                            System.out.println("Opción inválida. Intente de nuevo.");
-                    }
-                } while (opcionVentas != 5);
-                break;
-            case 4:
+                        
+                        switch (opcionVentas) {
+                            case 1:
+                                tiendaSaludable.mostrarVentas();
+                                break;
+                            case 2:
+                                tiendaSaludable.agregarVenta();
+                                break;
+                            case 3:
+                                tiendaSaludable.actualizarVenta();
+                                break;
+                            case 4:
+                                tiendaSaludable.eliminarVenta();
+                                break;
+                            case 5:
+                                System.out.println("Regresando al menú principal...");
+                                break;
+                            default:
+                                System.out.println("Opción inválida. Intente de nuevo.");
+                        }
+                    } while (opcionVentas != 5);
+                }
+            case 4 -> {
                 // Lógica para gestionar dietas
                 int opcionDietas;
                 do {
@@ -173,12 +173,9 @@ public class Menu {
                             System.out.println("Opción inválida. Intente de nuevo.");
                     }
                 } while (opcionDietas != 5);
-                break;
-            case 5:
-                System.out.println("Saliendo del programa...");
-                break;
-            default:
-                System.out.println("Opción inválida. Intente de nuevo.");
+                }
+            case 5 -> System.out.println("Saliendo del programa...");
+            default -> System.out.println("Opción inválida. Intente de nuevo.");
             }
         } while (opcion != 5);
     }

@@ -221,6 +221,7 @@ public class TiendaSaludable {
             menu.mostrarMenu();            
             
             // Aquí se llama a la interfaz gráfica
+            SwingUtilities.invokeLater(() -> new LoginGUI());
             SwingUtilities.invokeLater(() -> new TiendaSaludableGUI());
         } catch (IOException | CsvException e) {
             System.err.println("Error al cargar archivos CSV: " + e.getMessage());
